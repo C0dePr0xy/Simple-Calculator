@@ -21,7 +21,7 @@ int main()
 	std::cin >> name;
 	
 	//Creates user file.
-	std::ofstream namedata("user.txt");
+	std::ofstream namedata("name.udta");
 	namedata << name << "\n";
 	namedata.close();
 
@@ -36,7 +36,9 @@ int main()
 	std::cin >> double1 >> double2;
 
 	//Confirmation of inputs. (for debugging)
+	std::cout << " \n";
 	std::cout << "[" << double1 << "] [" << double2 << "]\n";
+	std::cout << " \n";
 
 	//User input for simple equation.
 	std::cout << "[+][-][*][/][q]\n";
@@ -58,6 +60,7 @@ int main()
 		break;
 	case 'q':
 		return 0;
+		break;
 	default:
 		"Invalid input!\n";
 		break;
