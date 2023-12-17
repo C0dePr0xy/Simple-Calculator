@@ -32,7 +32,38 @@ int main()
 
 	while (true) {
 	//The real reason you are using this program. :)
-	std::cout << "Equation (2 numbers!): ";
+	std::cout << "Equation (2 numbers or 1?): ";
+	int equationNumber;
+	std::cin>>equationNumber;
+
+	//added this if-statement for operations with 1 number and other math operations
+	if(equationNumber==1){
+		std::cout<<"Your number please: "<<std::endl;
+		double chosenNumber;
+		std::cin>>chosenNumber;
+		std::cout<<"If you want the square root then type \'r\' or if you want to the power then type \'^\'"<<std::endl;
+		char chosenOp;
+		while(std::cin>>chosenOp){
+			if(chosenOp == '^' || chosenOp == 'r'){
+				break;
+			}
+			else{
+				std::cout<<"Please try again. You can only choose \"r\" or \"^\""<<std::endl;
+				std::cin.clear();
+			}
+		}
+		if(chosenOp=='^'){
+			int squareNumber;
+			std::cout<<"Add a power number: "<<std::endl;
+			std::cin>>squareNumber;
+			std::cout<<chosenNumber<<"^"<<squareNumber<<" = "<<pow(chosenNumber,squareNumber)<<std::endl;
+		}
+		if(chosenOp=='r'){
+			std::cout<<"The sqaure root of "<<chosenNumber<<" is "<<sqrt(chosenNumber)<<" ."<<std::endl;
+		}
+		
+	}
+	else{
 	std::cin >> double1 >> double2;
 
 	//Confirmation of inputs. (for debugging)
@@ -65,6 +96,7 @@ int main()
 		"Invalid input!\n";
 		break;
 		}
+	}
 	}
 	return 0;
 }
