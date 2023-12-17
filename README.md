@@ -1,4 +1,4 @@
-# Simple Calculator
+# ![Simple-Calculator Logo github](https://github.com/C0dePr0xy/Simple-Calculator/assets/87400651/bf8b8776-9b3f-4aac-b4d1-26958d03eebf) Simple Calculator
 
 ## Table of Contents
 
