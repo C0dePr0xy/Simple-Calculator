@@ -2,15 +2,19 @@
 #include "variables.hpp"
 #include <fstream>
 
+std::ofstream mathdata("history.mdta");
+
 //Handles addition.
 void adding() {
 	//Math Operation.
 	std::cout << double1 + double2 << "\n";
 
 	//Generates text file to store last known equation.
-	std::ofstream mathdata("history.mdta");
-	mathdata << "[" << double1 << "] [" << double2 << "]\n";
-	mathdata << double1 + double2 << "\n";
+	mathdata.open("history.mdta");
+	mathdata << "--------------------------------------------------------\n";
+	mathdata << "[" << double1 << "]" << " + " << "[" << double2 << "]\n";
+	mathdata << " = " << double1 + double2 << "\n";
+	mathdata << "--------------------------------------------------------\n";
 	mathdata.close();
 }
 
@@ -20,9 +24,11 @@ void subtracting() {
 	std::cout << double1 - double2 << "\n";
 
 	//Generates text file to store last known equation.
-	std::ofstream mathdata("history.mdta");
-	mathdata << "[" << double1 << "] [" << double2 << "]\n";
-	mathdata << double1 - double2 << "\n";
+	mathdata.open("history.mdta");
+	mathdata << "--------------------------------------------------------\n";
+	mathdata << "[" << double1 << "]" << " - " << "[" << double2 << "]\n";
+	mathdata << " = " << double1 - double2 << "\n";
+	mathdata << "--------------------------------------------------------\n";
 	mathdata.close();
 }
 
@@ -32,9 +38,11 @@ void multiplying() {
 	std::cout << double1 * double2 << "\n";
 
 	//Generates text file to store last known equation.
-	std::ofstream mathdata("history.mdta");
-	mathdata << "[" << double1 << "] [" << double2 << "]\n";
-	mathdata << double1 * double2 << "\n";
+	mathdata.open("history.mdta");
+	mathdata << "--------------------------------------------------------\n";
+	mathdata << "[" << double1 << "]" << " * " << "[" << double2 << "]\n";
+	mathdata << " = " << double1 * double2 << "\n";
+	mathdata << "--------------------------------------------------------\n";
 	mathdata.close();
 }
 
@@ -44,8 +52,10 @@ void dividing() {
 	std::cout << double1 / double2 << "\n";
 
 	//Generates text file to store last known equation.
-	std::ofstream mathdata("history.mdta");
-	mathdata << "[" << double1 << "] [" << double2 << "]\n";
-	mathdata << double1 / double2 << "\n";
+	mathdata.open("history.mdta");
+	mathdata << "--------------------------------------------------------\n";
+	mathdata << "[" << double1 << "]" << " / " << "[" << double2 << "]\n";
+	mathdata << " = " << double1 / double2 << "\n";
+	mathdata << "--------------------------------------------------------\n";
 	mathdata.close();
 }

@@ -62,7 +62,7 @@ int main()
 		return 0;
 		break;
 	default:
-		"Invalid input!\n";
+		"Syntax Error!\n";
 		break;
 		}
 	}
