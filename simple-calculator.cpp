@@ -41,7 +41,7 @@ int main()
 	std::cout << " \n";
 
 	//User input for simple equation.
-	std::cout << "[+][-][*][/][q]\n";
+	std::cout << "[+][-][*][/][q][s]\n";
 	std::cin >> asmd;
 
 	//Equation final output. :D
@@ -61,7 +61,7 @@ int main()
 	case 'q':
 		return 0;
 		break;
-	case 'srpo':
+	case 's':
 		squareroot_or_powerof();
 		break;
 	default:
