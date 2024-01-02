@@ -1,6 +1,7 @@
 #include <iostream>
 #include "variables.hpp"
 #include <fstream>
+#include <cmath>
 
 std::ofstream mathdata("history.mdta");
 
