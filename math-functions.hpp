@@ -61,6 +61,19 @@ void dividing() {
 	mathdata.close();
 }
 
+void modulo() {
+	//Modulo operation
+	std::cout<< fmod(double1,double2)<<"\n";
+
+		//Generates text file to store last known equation.
+	mathdata.open("history.mdta");
+	mathdata << "--------------------------------------------------------\n";
+	mathdata << "[" << double1 << "]" << " % " << "[" << double2 << "]\n";
+	mathdata << " = " << fmod(double1,double2) << "\n";
+	mathdata << "--------------------------------------------------------\n";
+	mathdata.close();
+}
+
 //Handles square root and power of functionality thanks to Saif Darwish.
 //This code will have history functionality later. (C0dePr0xy)
 void squareroot_or_powerof() {
