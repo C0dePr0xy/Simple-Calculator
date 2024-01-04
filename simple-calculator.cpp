@@ -64,6 +64,9 @@ int main()
 	case 's':
 		squareroot_or_powerof();
 		break;
+	case '%':
+		modulo();
+		break;
 		}
 	}
 	return 0;
