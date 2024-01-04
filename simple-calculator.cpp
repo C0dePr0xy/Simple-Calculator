@@ -41,7 +41,7 @@ int main()
 	std::cout << " \n";
 
 	//User input for simple equation.
-	std::cout << "[+][-][*][/][q][s]\n";
+	std::cout << "[+][-][*][/][q][s][%]\n";
 	std::cin >> asmd;
 
 	//Equation final output. :D
