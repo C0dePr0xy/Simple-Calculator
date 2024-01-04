@@ -64,9 +64,6 @@ int main()
 	case 's':
 		squareroot_or_powerof();
 		break;
-	default:
-		"Invalid input!\n";
-		break;
 		}
 	}
 	return 0;
