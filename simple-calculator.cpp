@@ -37,15 +37,15 @@ int main()
 
 	//Added this 2 while-loops to make sure only numbers are chosen
         while (!(std::cin >> double1)) {
-        std::cin.clear(); // Fehlerzustand löschen
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Puffer leeren
+        std::cin.clear(); 
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
         std::cout << "The first number was not valid. Please enter only numbers: ";
         }
 
 	std::cout<<"Add the second number: ";
 	while (!(std::cin >> double2)) {
-        std::cin.clear(); // Fehlerzustand löschen
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Puffer leeren
+        std::cin.clear(); 
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cout << "The second number was not valid. Please enter only numbers: ";
         }
 
