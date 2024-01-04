@@ -89,9 +89,27 @@ void squareroot_or_powerof() {
 			std::cout<<"Add a power number: "<<std::endl;
 			std::cin>>squareNumber;
 			std::cout<<chosenNumber<<"^"<<squareNumber<<" = "<<pow(chosenNumber,squareNumber)<<std::endl;
+		
+		
+			//Generates text file to store last known equation.
+	mathdata.open("history.mdta");
+	mathdata << "--------------------------------------------------------\n";
+	mathdata << "[" << chosenNumber<<"^"<<squareNumber<< "]"]\n";
+	mathdata << " = " << pow(chosenNumber,squareNumber) << "\n";
+	mathdata << "--------------------------------------------------------\n";
+	mathdata.close();
+		    
 		}
 		if(chosenOp=='r'){
 			std::cout<<"The sqaure root of "<<chosenNumber<<" is "<<sqrt(chosenNumber)<<" ."<<std::endl;
+		
+			//Generates text file to store last known equation.
+	mathdata.open("history.mdta");
+	mathdata << "--------------------------------------------------------\n";
+	mathdata << "The sqaure root of ["<<chosenNumber<<"] is ["<<sqrt(chosenNumber)<< "]\n";
+	mathdata << "--------------------------------------------------------\n";
+	mathdata.close();
+		
 		}
 	}
 }
