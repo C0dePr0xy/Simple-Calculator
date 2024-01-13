@@ -20,11 +20,6 @@ int main()
 	//Introduction. (for debugging)
 	std::cout << "What is your name?\n";
 	std::cin >> name;
-	
-	//Creates user file.
-	std::ofstream namedata("name.udta");
-	namedata << name << "\n";
-	namedata.close();
 
 	std::cout << "Welcome to my simple calculator, " << name << ".\n";
 	std::cout << " \n";
@@ -55,10 +50,10 @@ int main()
 	std::cout << " \n";
 
 	//User input for simple equation.
-	std::cout << "[+][-][*][/][q][s][%]\n";
+	std::cout << "[+][-][*][/][q][s][%][c] (q = quit, c = clear history)\n";
 	//Added again a while-loop to make sure picking the right operations
 	while(std::cin >> asmd){
-	if(asmd=='+' || asmd=='-' || asmd=='*' || asmd=='/' || asmd=='q' || asmd=='s' || asmd=='%'){
+	if(asmd=='+' || asmd=='-' || asmd=='*' || asmd=='/' || asmd=='q' || asmd=='s' || asmd=='%' || asmd=='c'){
 	break;
 	}
 	else{
@@ -89,6 +84,8 @@ int main()
 	case '%':
 	    modulo();
 		break;
+	case 'c':
+	    clear_history();
 		}
 	}
 	return 0;
