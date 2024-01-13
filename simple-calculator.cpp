@@ -57,7 +57,7 @@ int main()
 	break;
 	}
 	else{
-	std::cout<<"Please enter one of the following operations only: [+][-][*][/][q][s][%] \n";
+	std::cout<<"Please enter one of the following inputs only: [+][-][*][/][q][s][%][c] (q = quit, c = clear history)\n";
 	std::cin.clear();
 	}
 	}
