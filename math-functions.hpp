@@ -8,7 +8,7 @@
 //Handles addition.
 void adding() {
 	const char* math = "history.mdta";
-    std::ofstream mathdata(math, std::ios::app);
+        std::ofstream mathdata(math, std::ios::app);
 	//Math Operation.
 	std::cout << double1 + double2 << "\n";
 
@@ -24,7 +24,7 @@ void adding() {
 //Handles subtraction.
 void subtracting() {
 	const char* math = "history.mdta";
-    std::ofstream mathdata(math, std::ios::app);
+        std::ofstream mathdata(math, std::ios::app);
 	//Math Operation.
 	std::cout << double1 - double2 << "\n";
 
@@ -46,7 +46,7 @@ void multiplying() {
 	//Generates text file to store last known equation.
 	//mathdata.open("history.mdta");
 	const char* math = "history.mdta";
-    std::ofstream mathdata(math, std::ios::app);
+        std::ofstream mathdata(math, std::ios::app);
 	mathdata << "--------------------------------------------------------\n";
 	mathdata << "User: "<< name<<"\n";
 	mathdata << "[" << double1 << "]" << " * " << "[" << double2 << "]\n";
@@ -63,7 +63,7 @@ void dividing() {
 	//Generates text file to store last known equation.
 	//mathdata.open("history.mdta");
 	const char* math = "history.mdta";
-    std::ofstream mathdata(math, std::ios::app);
+        std::ofstream mathdata(math, std::ios::app);
 	mathdata << "--------------------------------------------------------\n";
 	mathdata << "User: "<< name<<"\n";
 	mathdata << "[" << double1 << "]" << " / " << "[" << double2 << "]\n";
@@ -79,7 +79,7 @@ void modulo() {
 	//Generates text file to store last known equation.
 	//mathdata.open("history.mdta");
 	const char* math = "history.mdta";
-    std::ofstream mathdata(math, std::ios::app);
+        std::ofstream mathdata(math, std::ios::app);
 	mathdata << "--------------------------------------------------------\n";
 	mathdata << "User: "<< name<<"\n";
 	mathdata << "[" << double1 << "]" << " % " << "[" << double2 << "]\n";
@@ -109,8 +109,8 @@ void squareroot_or_powerof() {
 		
 		
 	//Generates text file to store last known equation.
-    const char* math = "history.mdta";
-    std::ofstream mathdata(math, std::ios::app);
+        const char* math = "history.mdta";
+        std::ofstream mathdata(math, std::ios::app);
 	mathdata << "--------------------------------------------------------\n";
 	mathdata << "User: "<< name<<"\n";
 	mathdata << "[" << double1 <<"^"<<squareNumber<< "]\n";
@@ -124,7 +124,7 @@ void squareroot_or_powerof() {
 		
 	//Generates text file to store last known equation.
 	const char* math = "history.mdta";
-    std::ofstream mathdata(math, std::ios::app);
+        std::ofstream mathdata(math, std::ios::app);
 	mathdata << "--------------------------------------------------------\n";
 	mathdata << "User: "<< name<<"\n";
 	mathdata << "The sqaure root of ["<<double1<<"] is ["<<sqrt(double1)<< "]\n";
@@ -138,6 +138,6 @@ void squareroot_or_powerof() {
 
 void clear_history(){
 	const char* math = "history.mdta";
-    std::ofstream mathdata(math, std::ios::trunc);
+        std::ofstream mathdata(math, std::ios::trunc);
 	mathdata.close();
 }
