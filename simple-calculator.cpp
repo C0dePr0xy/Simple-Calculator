@@ -112,7 +112,7 @@ int main()
 	break;
 	}
 	else{
-	std::cout<<"Please enter one of the following inputs only: [+][-][*][/][%]\n";
+	std::cout<<"Please enter one of the following operations only: [+][-][*][/][%] \n";
 	std::cin.clear();
 	}
 	}
