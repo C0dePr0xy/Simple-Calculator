@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
+#include <limits>
 //The bones of the program lies in these header files. :D
 #include "variables.hpp"
 #include "math-functions.hpp"
@@ -19,11 +20,6 @@ int main()
 	//Introduction. (for debugging)
 	std::cout << "What is your name?\n";
 	std::cin >> name;
-	
-	//Creates user file.
-	std::ofstream namedata("name.udta");
-	namedata << name << "\n";
-	namedata.close();
 
 	std::cout << "Welcome to my simple calculator, " << name << ".\n";
 	std::cout << " \n";
@@ -33,7 +29,20 @@ int main()
 	while (true) {
 	//The real reason you are using this program. :)
 	std::cout << "Equation (2 numbers!): ";
-	std::cin >> double1 >> double2;
+
+	//Added this 2 while-loops to make sure only numbers are chosen
+        while (!(std::cin >> double1)) {
+        std::cin.clear(); 
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+        std::cout << "The first number was not valid. Please enter only numbers: ";
+        }
+
+	std::cout<<"Add the second number: ";
+	while (!(std::cin >> double2)) {
+        std::cin.clear(); 
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "The second number was not valid. Please enter only numbers: ";
+        }
 
 	//Confirmation of inputs. (for debugging)
 	std::cout << " \n";
@@ -41,9 +50,17 @@ int main()
 	std::cout << " \n";
 
 	//User input for simple equation.
-	std::cout << "[+][-][*][/][q][s]\n";
-	std::cin >> asmd;
-
+	std::cout << "[+][-][*][/][q][s][%][c] (q = quit, c = clear history)\n";
+	//Added again a while-loop to make sure picking the right operations
+	while(std::cin >> asmd){
+	if(asmd=='+' || asmd=='-' || asmd=='*' || asmd=='/' || asmd=='q' || asmd=='s' || asmd=='%' || asmd=='c'){
+	break;
+	}
+	else{
+	std::cout<<"Please enter one of the following inputs only: [+][-][*][/][q][s][%][c] (q = quit, c = clear history)\n";
+	std::cin.clear();
+	}
+	}
 	//Equation final output. :D
 	switch (asmd) {
 	case  '+':
@@ -64,9 +81,11 @@ int main()
 	case 's':
 		squareroot_or_powerof();
 		break;
-	default:
-		"Invalid input!\n";
+	case '%':
+	    modulo();
 		break;
+	case 'c':
+	    clear_history();
 		}
 	}
 	return 0;
