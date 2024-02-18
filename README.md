@@ -50,7 +50,7 @@ Welcome to the Simple Calculator project! This command-line calculator applicati
 4. **Run the executable:**
 
     ```bash
-    ./Simple Calculator
+    ./Simple-Calculator
     ```
 
 ## Usage
