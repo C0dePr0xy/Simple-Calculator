@@ -44,7 +44,7 @@ Welcome to the Simple Calculator project! This command-line calculator applicati
 3. **Compile the source code:**
 
     ```bash
-    gcc simple-calculator.cpp variables.hpp math-functions.hpp -o Simple Calculator
+    g++ simple-calculator.cpp variables.hpp math-functions.hpp -o Simple-Calculator
     ```
 
 4. **Run the executable:**
