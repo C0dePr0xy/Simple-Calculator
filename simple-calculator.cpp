@@ -1,14 +1,9 @@
-#include <cmath>
 #include <filesystem>
-#include <fstream>
-#include <iostream>
 #include <limits>
-#include "variables.hpp"
 #include "math-functions.hpp"
 
 std::string name;
-double double1;
-double double2;
+double double1, double2;
 char asmd;
 
 int main() {
