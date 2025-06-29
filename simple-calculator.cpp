@@ -7,8 +7,7 @@ double double1, double2;
 char asmd;
 
 int main() {
-    std::cout << "Simple Calculator [v0.3]\n";
-    std::cout << " \n";
+    std::cout << "Simple Calculator [v0.3]\n \n";
 
     std::cout << "What is your name?\n";
     std::cin >> name;
